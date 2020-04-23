@@ -18,3 +18,12 @@ jobs:
       run: docker build -t test .
     - name: Run tests
       run: docker run test
+      
+  codestyle_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: codestyle_check
+        uses: smay1613/clang-tidy-action@master
+        
+    env:
+      GITHUB_TOKEN: ${{secrets.GIT_TOKEN }}
