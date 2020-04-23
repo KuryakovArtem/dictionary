@@ -30,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: codestyle_check
-      - uses: smay1613/clang-tidy-action@master
+        uses: smay1613/clang-tidy-action@master
       
         
     env:
