@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: codestyle_check
         uses: smay1613/clang-tidy-action@master
+        with: 
+          dir: src
         
     env:
       GITHUB_TOKEN: ${{secrets.GIT_TOKEN }}
