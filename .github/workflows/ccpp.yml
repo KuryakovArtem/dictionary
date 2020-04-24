@@ -38,7 +38,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: codestyle_check
         uses: CyberZHG/github-action-python-lint@master
-     #   run: --linelength=120 --filter=-build/include_subdir  src/dictionary.cpp tests/test.cpp
+      - name: get update
+        run: sudo apt-get update -y
+      - name: get install
+        run: sudo apt-get install -y cppcheck
+      - name: check
+        run: cppcheck cppcheck -q --enable=all ./dictionary.cpp
       
         
     env:
