@@ -52,21 +52,25 @@ int main()
 		}
 		free(stringFromFile);
 		fprintf(stdout, "Writing without punctuation was succesfully made!\n");
+		checkPunctuationMark(true);
 		fclose(toWriteWithoutPunctuation);				//!need to close 	
 		fclose(filePointer);
 	}
 	else {
 		if (filePointer == NULL) {
 			fprintf(stdout, "File is not created!\n");
+			checkPunctuationMark(false);
 			getchar();
 			exit(ERROR_OPEN_FILE);
 		}
 		if (toWriteWithoutPunctuation == NULL) {
 			fprintf(stdout, "There were errors in second(copy) file");
+			checkPunctuationMark(false);
 			getchar();
 			exit(ERROR_OPEN_FILE);
 		}
 		printf("error opening file");
+		checkPunctuationMark(false);
 		getchar();
 		exit(ERROR_OPEN_FILE);
 	}
@@ -82,6 +86,7 @@ int main()
 		free(strToLower);
 
 		fprintf(stdout, "Writing in lower case was succesfully made\n");
+		checkLowerCase(true);
 	}
 
 
@@ -150,7 +155,26 @@ int main()
 	getchar();
 }
 
+bool checkPunctuationMark(bool a)
+{
+	if (a==true)
+		return true;
+	else return false;
+}
 
+bool checkLowerCase(bool a)
+{
+	if (a==true)
+		return true;
+	else return false;
+}
+
+bool checkFinal(bool a)
+{
+	if (a==true)
+		return true;
+	else return false;
+}
 
 char* deletePunctuationMark(const char* string)
 {
