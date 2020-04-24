@@ -22,6 +22,7 @@ jobs:
   docker_push:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2     
       - name: build image 
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/dictionary . 
       - name: jopa  
