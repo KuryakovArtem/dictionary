@@ -1,12 +1,20 @@
 #include "pch.h"
 #include "../dictionary/dictionary.cpp"
 #include "../dictionary/dictionary.h"
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  //EXPECT_TRUE(true);
+
+TEST(dict_test, punctuation_test)
+{
+	EXPECT_EQ(true, checkPunctuationMark(true));	
 }
 
-TEST(TestAss, Ass)
+
+
+TEST(dict_test, lower_case_test)
 {
-	EXPECT_EQ(0, 0);
+	EXPECT_EQ(true, checkLowerCase(true));	
+}
+
+TEST(dict_test, final_output_test)
+{
+	EXPECT_EQ(true, checkFinal(true));	
 }
