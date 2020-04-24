@@ -12,6 +12,9 @@
 //FUNCTIONS_PROTOTYPES
 char* deletePunctuationMark(const char* symbol);
 char* toLowerCase(char* str, char* strToLower);
+bool checkLowerCase(bool a);
+bool checkFinal(bool a);
+bool checkPunctuationMark(bool a);
 
 struct WordCounter
 {
