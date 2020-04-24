@@ -24,7 +24,7 @@ jobs:
     steps:
     - run:|
         docker login --username="kuryakovartem" --password="Kuryakov2001"
-        docker push ${{secrets.DOCKER_USERNAME}}/dictionary$ver_$latest
+        docker push kuryakovartem/dictionary$ver_$latest
      
   codestyle_check:
     runs-on: ubuntu-latest
